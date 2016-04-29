@@ -1,0 +1,120 @@
+BITMASK	vaddr.h	/^#define BITMASK(SHIFT, CNT) (((1ul << (CNT)) - 1) /
+Minit	init.c	/^int main (void) NO_RETURN;$/
+alloc_frame	thread.c	/^alloc_frame (struct thread *t, size_t size) $/
+allocate_tid	thread.c	/^allocate_tid (void) $/
+arena_to_block	malloc.c	/^arena_to_block (struct arena *a, size_t idx) $/
+barrier	synch.h	/^#define barrier() asm volatile ("" : : : "memory")/
+block_size	malloc.c	/^block_size (void *block) $/
+block_to_arena	malloc.c	/^block_to_arena (struct block *b)$/
+calloc	malloc.c	/^calloc (size_t a, size_t b) $/
+calloc	malloc.h	/^void *calloc (size_t, size_t) __attribute__ ((mall/
+cond_broadcast	synch.c	/^cond_broadcast (struct condition *cond, struct loc/
+cond_init	synch.c	/^cond_init (struct condition *cond)$/
+cond_signal	synch.c	/^cond_signal (struct condition *cond, struct lock */
+cond_wait	synch.c	/^cond_wait (struct condition *cond, struct lock *lo/
+free	malloc.c	/^free (void *p) $/
+idle	thread.c	/^idle (void *idle_started_ UNUSED) $/
+inb	io.h	/^inb (uint16_t port)$/
+init_pool	palloc.c	/^init_pool (struct pool *p, void *base, size_t page/
+init_thread	thread.c	/^init_thread (struct thread *t, const char *name, i/
+inl	io.h	/^inl (uint16_t port)$/
+insb	io.h	/^insb (uint16_t port, void *addr, size_t cnt)$/
+insl	io.h	/^insl (uint16_t port, void *addr, size_t cnt)$/
+insw	io.h	/^insw (uint16_t port, void *addr, size_t cnt)$/
+intr_context	interrupt.c	/^intr_context (void) $/
+intr_disable	interrupt.c	/^intr_disable (void) $/
+intr_dump_frame	interrupt.c	/^intr_dump_frame (const struct intr_frame *f) $/
+intr_enable	interrupt.c	/^intr_enable (void) $/
+intr_get_level	interrupt.c	/^intr_get_level (void) $/
+intr_handler	interrupt.c	/^intr_handler (struct intr_frame *frame) $/
+intr_init	interrupt.c	/^intr_init (void)$/
+intr_name	interrupt.c	/^intr_name (uint8_t vec) $/
+intr_register_ext	interrupt.c	/^intr_register_ext (uint8_t vec_no, intr_handler_fu/
+intr_register_int	interrupt.c	/^intr_register_int (uint8_t vec_no, int dpl, enum i/
+intr_set_level	interrupt.c	/^intr_set_level (enum intr_level level) $/
+intr_yield_on_return	interrupt.c	/^intr_yield_on_return (void) $/
+inw	io.h	/^inw (uint16_t port)$/
+is_kernel_vaddr	vaddr.h	/^is_kernel_vaddr (const void *vaddr) $/
+is_thread	thread.c	/^static bool is_thread (struct thread *) UNUSED;$/
+is_thread	thread.c	/^is_thread (struct thread *t)$/
+is_user_vaddr	vaddr.h	/^is_user_vaddr (const void *vaddr) $/
+kernel_thread	thread.c	/^kernel_thread (thread_func *function, void *aux) $/
+lock_acquire	synch.c	/^lock_acquire (struct lock *lock)$/
+lock_held_by_current_thread	synch.c	/^lock_held_by_current_thread (const struct lock *lo/
+lock_init	synch.c	/^lock_init (struct lock *lock)$/
+lock_release	synch.c	/^lock_release (struct lock *lock) $/
+lock_try_acquire	synch.c	/^lock_try_acquire (struct lock *lock)$/
+make_gate	interrupt.c	/^make_gate (void (*function) (void), int dpl, int t/
+make_idtr_operand	interrupt.c	/^make_idtr_operand (uint16_t limit, void *base)$/
+make_intr_gate	interrupt.c	/^make_intr_gate (void (*function) (void), int dpl)$/
+make_trap_gate	interrupt.c	/^make_trap_gate (void (*function) (void), int dpl)$/
+malloc	malloc.c	/^malloc (size_t size) $/
+malloc	malloc.h	/^void *malloc (size_t) __attribute__ ((malloc));$/
+malloc_init	malloc.c	/^malloc_init (void) $/
+next_thread_to_run	thread.c	/^next_thread_to_run (void) $/
+outb	io.h	/^outb (uint16_t port, uint8_t data)$/
+outl	io.h	/^outl (uint16_t port, uint32_t data)$/
+outsb	io.h	/^outsb (uint16_t port, const void *addr, size_t cnt/
+outsl	io.h	/^outsl (uint16_t port, const void *addr, size_t cnt/
+outsw	io.h	/^outsw (uint16_t port, const void *addr, size_t cnt/
+outw	io.h	/^outw (uint16_t port, uint16_t data)$/
+page_from_pool	palloc.c	/^page_from_pool (const struct pool *pool, void *pag/
+paging_init	init.c	/^paging_init (void)$/
+palloc_free_multiple	palloc.c	/^palloc_free_multiple (void *pages, size_t page_cnt/
+palloc_free_page	palloc.c	/^palloc_free_page (void *page) $/
+palloc_get_multiple	palloc.c	/^palloc_get_multiple (enum palloc_flags flags, size/
+palloc_get_page	palloc.c	/^palloc_get_page (enum palloc_flags flags) $/
+palloc_init	palloc.c	/^palloc_init (void) $/
+parse_options	init.c	/^parse_options (char **argv) $/
+pd_no	pte.h	/^static inline uintptr_t pd_no (const void *va) {$/
+pde_create	pte.h	/^static inline uint32_t pde_create (uint32_t *pt) {/
+pde_get_pt	pte.h	/^static inline uint32_t *pde_get_pt (uint32_t pde) /
+pg_no	vaddr.h	/^static inline uintptr_t pg_no (const void *va) {$/
+pg_ofs	vaddr.h	/^static inline unsigned pg_ofs (const void *va) {$/
+pg_round_down	vaddr.h	/^static inline void *pg_round_down (const void *va)/
+pg_round_up	vaddr.h	/^static inline void *pg_round_up (const void *va) {/
+pic_end_of_interrupt	interrupt.c	/^pic_end_of_interrupt (int irq) $/
+pic_init	interrupt.c	/^pic_init (void)$/
+power_off	init.c	/^power_off (void) $/
+power_off	init.h	/^void power_off (void) NO_RETURN;$/
+print_stats	init.c	/^print_stats (void) $/
+pt_no	pte.h	/^static inline unsigned pt_no (const void *va) {$/
+pte_create_kernel	pte.h	/^static inline uint32_t pte_create_kernel (void *pa/
+pte_create_user	pte.h	/^static inline uint32_t pte_create_user (void *page/
+pte_get_page	pte.h	/^static inline void *pte_get_page (uint32_t pte) {$/
+ptov	vaddr.h	/^ptov (uintptr_t paddr)$/
+ram_init	init.c	/^ram_init (void) $/
+read_command_line	init.c	/^read_command_line (void) $/
+realloc	malloc.c	/^realloc (void *old_block, size_t new_size) $/
+register_handler	interrupt.c	/^register_handler (uint8_t vec_no, int dpl, enum in/
+run_actions	init.c	/^run_actions (char **argv) $/
+run_task	init.c	/^run_task (char **argv)$/
+running_thread	thread.c	/^running_thread (void) $/
+schedule	thread.c	/^schedule (void) $/
+schedule_tail	thread.c	/^schedule_tail (struct thread *prev) $/
+sema_down	synch.c	/^sema_down (struct semaphore *sema) $/
+sema_init	synch.c	/^sema_init (struct semaphore *sema, unsigned value)/
+sema_self_test	synch.c	/^sema_self_test (void) $/
+sema_test_helper	synch.c	/^sema_test_helper (void *sema_) $/
+sema_try_down	synch.c	/^sema_try_down (struct semaphore *sema) $/
+sema_up	synch.c	/^sema_up (struct semaphore *sema) $/
+thread_block	thread.c	/^thread_block (void) $/
+thread_create	thread.c	/^thread_create (const char *name, int priority,$/
+thread_current	thread.c	/^thread_current (void) $/
+thread_exit	thread.c	/^thread_exit (void) $/
+thread_exit	thread.h	/^void thread_exit (void) NO_RETURN;$/
+thread_get_load_avg	thread.c	/^thread_get_load_avg (void) $/
+thread_get_nice	thread.c	/^thread_get_nice (void) $/
+thread_get_priority	thread.c	/^thread_get_priority (void) $/
+thread_get_recent_cpu	thread.c	/^thread_get_recent_cpu (void) $/
+thread_name	thread.c	/^thread_name (void) $/
+thread_print_stats	thread.c	/^thread_print_stats (void) $/
+thread_set_nice	thread.c	/^thread_set_nice (int nice UNUSED) $/
+thread_set_priority	thread.c	/^thread_set_priority (int new_priority) $/
+thread_start	thread.c	/^thread_start (void) $/
+thread_tick	thread.c	/^thread_tick (void) $/
+thread_tid	thread.c	/^thread_tid (void) $/
+thread_unblock	thread.c	/^thread_unblock (struct thread *t) $/
+thread_yield	thread.c	/^thread_yield (void) $/
+usage	init.c	/^usage (void)$/
+vtop	vaddr.h	/^vtop (const void *vaddr)$/

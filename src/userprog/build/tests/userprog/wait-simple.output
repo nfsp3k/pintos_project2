@@ -1,0 +1,33 @@
+Copying tests/userprog/wait-simple into /tmp/DiFvmFTCrd.dsk...
+Copying tests/userprog/child-simple into /tmp/DiFvmFTCrd.dsk...
+Writing command line to /tmp/vsXZMH8YXf.dsk...
+qemu -hda /tmp/vsXZMH8YXf.dsk -hdb /tmp/MgCEmmoVUh.dsk -hdc /tmp/DiFvmFTCrd.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put wait-simple put child-simple run wait-simple
+Pintos booting with 4,096 kB RAM...
+374 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  107,520,000 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Formatting file system...done.
+Boot complete.
+Putting 'wait-simple' into the file system...
+Putting 'child-simple' into the file system...
+Executing 'wait-simple':
+(wait-simple) begin
+(child-simple) run
+child-simple: exit(81)
+(wait-simple) wait(exec()) = 81
+(wait-simple) end
+wait-simple: exit(0)
+Execution of 'wait-simple' complete.
+Timer: 65 ticks
+Thread: 30 idle ticks, 34 kernel ticks, 1 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 120 reads, 300 writes
+hd1:0: 145 reads, 0 writes
+Console: 953 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...

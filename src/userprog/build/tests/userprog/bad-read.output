@@ -1,0 +1,27 @@
+Copying tests/userprog/bad-read into /tmp/OzZKz08n3o.dsk...
+Writing command line to /tmp/xpHDxBDzDu.dsk...
+qemu -hda /tmp/xpHDxBDzDu.dsk -hdb /tmp/SJSgNhLnB3.dsk -hdc /tmp/OzZKz08n3o.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put bad-read run bad-read
+Pintos booting with 4,096 kB RAM...
+374 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  113,664,000 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 73 sector (36 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Formatting file system...done.
+Boot complete.
+Putting 'bad-read' into the file system...
+Executing 'bad-read':
+(bad-read) begin
+bad-read: exit(-1)
+Execution of 'bad-read' complete.
+Timer: 60 ticks
+Thread: 30 idle ticks, 30 kernel ticks, 0 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 59 reads, 154 writes
+hd1:0: 73 reads, 0 writes
+Console: 774 characters output
+Keyboard: 0 keys pressed
+Exception: 1 page faults
+Powering off...

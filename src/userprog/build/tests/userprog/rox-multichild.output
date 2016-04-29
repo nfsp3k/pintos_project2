@@ -1,0 +1,64 @@
+Copying tests/userprog/rox-multichild into /tmp/M88KjkiMts.dsk...
+Copying tests/userprog/child-rox into /tmp/M88KjkiMts.dsk...
+Writing command line to /tmp/Q3novJOpVP.dsk...
+qemu -hda /tmp/Q3novJOpVP.dsk -hdb /tmp/J6QVcjazdd.dsk -hdc /tmp/M88KjkiMts.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put rox-multichild put child-rox run rox-multichild
+Pintos booting with 4,096 kB RAM...
+374 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  52,377,600 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 156 sector (78 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Formatting file system...done.
+Boot complete.
+Putting 'rox-multichild' into the file system...
+Putting 'child-rox' into the file system...
+Executing 'rox-multichild':
+(rox-multichild) begin
+(rox-multichild) open "child-rox"
+(rox-multichild) read "child-rox"
+(rox-multichild) write "child-rox"
+(rox-multichild) exec "child-rox 5"
+(child-rox) begin
+(child-rox) try to write "child-rox"
+(child-rox) exec "child-rox 4"
+(child-rox) begin
+(child-rox) try to write "child-rox"
+(child-rox) exec "child-rox 3"
+(child-rox) begin
+(child-rox) try to write "child-rox"
+(child-rox) exec "child-rox 2"
+(child-rox) begin
+(child-rox) try to write "child-rox"
+(child-rox) exec "child-rox 1"
+(child-rox) begin
+(child-rox) try to write "child-rox"
+(child-rox) try to write "child-rox"
+(child-rox) end
+child-rox: exit(12)
+(child-rox) try to write "child-rox"
+(child-rox) end
+child-rox: exit(12)
+(child-rox) try to write "child-rox"
+(child-rox) end
+child-rox: exit(12)
+(child-rox) try to write "child-rox"
+(child-rox) end
+child-rox: exit(12)
+(child-rox) try to write "child-rox"
+(child-rox) end
+child-rox: exit(12)
+(rox-multichild) write "child-rox"
+(rox-multichild) end
+rox-multichild: exit(0)
+Execution of 'rox-multichild' complete.
+Timer: 58 ticks
+Thread: 30 idle ticks, 24 kernel ticks, 4 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 288 reads, 324 writes
+hd1:0: 156 reads, 0 writes
+Console: 1834 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...

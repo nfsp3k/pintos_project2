@@ -1,0 +1,31 @@
+Copying tests/userprog/rox-simple into /tmp/X4VKdIE9sV.dsk...
+Writing command line to /tmp/yoeyfdrqY1.dsk...
+qemu -hda /tmp/yoeyfdrqY1.dsk -hdb /tmp/gkEojzArUC.dsk -hdc /tmp/X4VKdIE9sV.dsk -m 4 -net none -nographic -monitor null
+Kernel command line: -q -f put rox-simple run rox-simple
+Pintos booting with 4,096 kB RAM...
+374 pages available in kernel pool.
+373 pages available in user pool.
+Calibrating timer...  115,916,800 loops/s.
+hd0:0: detected 145 sector (72 kB) disk, model "QEMU HARDDISK", serial "QM00001"
+hd0:1: detected 4,032 sector (1 MB) disk, model "QEMU HARDDISK", serial "QM00002"
+hd1:0: detected 73 sector (36 kB) disk, model "QEMU HARDDISK", serial "QM00003"
+Formatting file system...done.
+Boot complete.
+Putting 'rox-simple' into the file system...
+Executing 'rox-simple':
+(rox-simple) begin
+(rox-simple) open "rox-simple"
+(rox-simple) read "rox-simple"
+(rox-simple) try to write "rox-simple"
+(rox-simple) end
+rox-simple: exit(0)
+Execution of 'rox-simple' complete.
+Timer: 61 ticks
+Thread: 30 idle ticks, 30 kernel ticks, 1 user ticks
+hd0:0: 0 reads, 0 writes
+hd0:1: 62 reads, 154 writes
+hd1:0: 73 reads, 0 writes
+Console: 905 characters output
+Keyboard: 0 keys pressed
+Exception: 0 page faults
+Powering off...
